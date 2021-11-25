@@ -1,8 +1,7 @@
+import {firebaseConfig,app} from "./firebase.mjs"
 
 
-
-
-
+console.log(app)
 
 const envioForm = (e) => {
     e.preventDefault(e)
