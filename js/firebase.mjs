@@ -17,3 +17,4 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.5.0/firebase
 export const app = initializeApp(firebaseConfig);
 console.log(app)
 console.log(firebaseConfig)
+

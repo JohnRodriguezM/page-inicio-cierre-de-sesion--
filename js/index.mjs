@@ -3,31 +3,33 @@ import {firebaseConfig,app} from "./firebase.mjs"
 
 console.log(app)
 
-const envioForm = (e) => {
+
+
+function envioForm(e) {
     e.preventDefault(e)
     let nombreH = document.getElementById('nombrecito').value
     let emailH = document.getElementById('email').value
+    let edad = document.getElementById('edad').value;
     let comentariosH = document.getElementById('comentarios').value
-    let edadH = document.getElementById('edad').value
-    let x = confirm(`Tu nombre es ${nombreH}, lo confirmas?`)
-    if(x){
-        alert("Tu nombre ha sido enviado")
-    }else{
-        alert("porfavor pon bien tu nombre")
+    const datos = {
+        nombreH,
+        emailH,
+        edad,
+        comentariosH,
     }
-    let y = confirm(`Tu email es ${emailH}, lo confirmas?`)
-    if(y){
-        alert("Tu correo ha sido enviado")
-    }else{
-        alert("porfavor pon bien tu correo")
-    }
-    let comentarios = confirm(`Tus comentarios son ${comentariosH}, estas de acuerdo?`)
-    if(comentariosH.length < 30){
-        alert("Los comentarios estan muy escasos, porfavor, cuentanos más ")
-    }
-    alert(`Tu edad es ${edadH}`);
-
-
+    envio(datos)
+    envioForm.reset()
+    alert(datos)
 
 }
 const envioFormm = document.getElementById("formularioEnvio").addEventListener('submit',envioForm);
+
+function envio(datos){
+    firebase.database().ref('contacto').push(datos)
+        .then(function(){
+            alert("guardado")
+        })
+        .catch(function(){
+            alert("no guardado")
+        })
+};
