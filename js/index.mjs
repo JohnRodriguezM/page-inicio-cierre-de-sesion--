@@ -32,8 +32,7 @@ export class autenticacion{
     // funcion para registro
 
     registro(email,password){
-        const auth = getAuth();
-        createUserWithEmailAndPassword(auth, email, password)
+        createUserWithEmailAndPassword(getAuth(), email, password)
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
@@ -48,8 +47,7 @@ export class autenticacion{
     }
     // funcion para autenticacion de firebase
     autenticacion(email,password){
-        const auth = getAuth();
-        signInWithEmailAndPassword(auth, email, password)
+        signInWithEmailAndPassword(getAuth(), email, password)
         .then((userCredential) => {
          // Signed in
         const user = userCredential.user;
