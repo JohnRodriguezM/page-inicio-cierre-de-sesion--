@@ -24,13 +24,15 @@ import {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const analytics = getAnalytics(app);
-const auth = getAuth(app);
+
 
 // desarrollo para autenticacion de firebase
 
 export class autenticacion{
     // funcion para registro
+
     registro(email,password){
+        const auth = getAuth(app);
         createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
           // Signed in
@@ -46,6 +48,7 @@ export class autenticacion{
     }
     // funcion para autenticacion de firebase
     autenticacion(email,password){
+        const auth = getAuth(app);
         signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
          // Signed in
