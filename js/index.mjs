@@ -32,7 +32,7 @@ export class autenticacion{
     // funcion para registro
 
     registro(email,password){
-        const auth = getAuth(app);
+        const auth = getAuth();
         createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
           // Signed in
@@ -48,7 +48,7 @@ export class autenticacion{
     }
     // funcion para autenticacion de firebase
     autenticacion(email,password){
-        const auth = getAuth(app);
+        const auth = getAuth();
         signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
          // Signed in
