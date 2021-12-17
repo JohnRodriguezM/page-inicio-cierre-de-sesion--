@@ -72,6 +72,40 @@ footer {
   position: fixed;
   bottom: 0px;
   width: 100%;
+  z-index: 55;
+}
+footer #popupDesplegable, footer #popupDesplegableInfoAdicional {
+  display: none;
+  position: fixed;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 600px;
+  max-height: 300px;
+  bottom: 15%;
+  right: 5%;
+  left: 5%;
+  top: 15%;
+  padding: 2rem 1rem;
+  background-color: #D9EFFD;
+  border-radius: 25px;
+  border: 2px solid rgba(52, 152, 219, 0.45);
+  -webkit-box-shadow: 0 0 700px 700px rgba(52, 152, 219, 0.25);
+          box-shadow: 0 0 700px 700px rgba(52, 152, 219, 0.25);
+}
+footer #popupDesplegable div #cierre, footer #popupDesplegable div #cierre2, footer #popupDesplegableInfoAdicional div #cierre, footer #popupDesplegableInfoAdicional div #cierre2 {
+  font-size: 25px;
+}
+footer #popupDesplegable div h2, footer #popupDesplegableInfoAdicional div h2 {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+footer #popupDesplegable #butonnn .field .control #popupRegistro, footer #popupDesplegable #butonnn .field .control #popupInfo, footer #popupDesplegable #butonnn2 .field .control #popupRegistro, footer #popupDesplegable #butonnn2 .field .control #popupInfo, footer #popupDesplegableInfoAdicional #butonnn .field .control #popupRegistro, footer #popupDesplegableInfoAdicional #butonnn .field .control #popupInfo, footer #popupDesplegableInfoAdicional #butonnn2 .field .control #popupRegistro, footer #popupDesplegableInfoAdicional #butonnn2 .field .control #popupInfo {
+  margin-top: 15px;
+}
+footer #popupRegistro2 {
+  position: absolute;
+  margin-top: -40px;
+  margin-left: calc(100% - 58%);
 }
 
 @media (min-width: 600px) and (orientation: landscape) {

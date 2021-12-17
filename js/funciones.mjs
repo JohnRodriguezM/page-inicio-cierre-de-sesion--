@@ -72,3 +72,28 @@ const ojo = document.getElementById('spanEye').addEventListener("click",mostrarC
   }
   const ojoCerrado = document.getElementById('spanEyeOculto').addEventListener("click",ocultarContraseña)
   // cambiar de tipo password a texto
+
+  function ocultarPopup() {
+    document.getElementById('popupDesplegable').style.display = 'none';
+    document.getElementById('parragoSignIn').style.display = 'none';
+  }
+  
+  function mostrarPopup() {
+    document.getElementById('popupDesplegable').style.display = 'block';
+  }
+  document.getElementById('buttonLogin').addEventListener('click',mostrarPopup)
+  document.getElementById('cierre').addEventListener('click',ocultarPopup)
+
+
+
+
+    // para la ventana de informacion adicional
+  
+    document.getElementById('popupRegistro2').addEventListener('click', (_)=>{
+      document.getElementById('popupDesplegableInfoAdicional').style.display = 'block';
+      document.getElementById('popupDesplegable').style.display = 'none';
+    })
+    
+    document.getElementById('cierre2').addEventListener('click', (_)=>{
+      document.getElementById('popupDesplegableInfoAdicional').style.display = 'none';
+    })

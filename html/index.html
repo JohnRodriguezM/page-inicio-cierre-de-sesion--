@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
     crossorigin="anonymous">
     <link rel="stylesheet" href="../css/stylesIndex.css">
+    <script type = "module" src="../js/funciones.mjs"></script>
     <title>Log in</title>
 </head>
 <body>
@@ -59,24 +60,24 @@
             <div class="field">
             <p class="control"><button class="button is-success" id="buttonSign" type="submit" style = " margin:0 auto; width: 100%; max-width:600px;" >Inicia sesión</button></p>
                 </div>
-            <div class="field">
-            <p class="control"><button class="button is-success" id="buttonGoogle" type="submit" style = " margin:0 auto; width: 100%; max-width:600px;">
-                Inicia sesión con google
-                <span style = "margin-left: 10px;">
-                      <i class="fab fa-google" ></i>
-                </span>
-                 
-            </button></p>
+           
             </div>
             </form>
-           
             <div class="field">
-            <p class="control"><button class="button is-success" id="buttonLogin" type="submit" onclick="mostrarPopup()" style = " margin:0 auto; width: 100%; max-width:600px;"> ¿No tienes una cuenta? Regístrate</button></p>
+              <p class="control"><button class="button is-success" id="buttonGoogle" type="submit" style = " margin:10px auto; width: 100%; max-width:600px;">
+                  Inicia sesión con google
+                  <span style = "margin-left: 10px;">
+                        <i class="fab fa-google" ></i>
+                  </span>
+                   
+              </button></p>
+            <div class="field">
+            <p class="control"><button class="button is-success" id="buttonLogin" style = " margin:0 auto; width: 100%; max-width:600px;"> ¿No tienes una cuenta? Regístrate</button></p>
             </div>
             </section>
         
     </main>
-        <footer>
+        
             <footer class="border-t border-gray-200">
                 <div
                   class="container flex flex-wrap items-center justify-center px-4 py-8 mx-auto  lg:justify-between"
@@ -153,12 +154,67 @@
                     </a>
                   </div>
                 </div>
-              </footer>
+        <section id="popupDesplegable" class="section">
+            <div><a href="#registroPopup" id="cierre"  name="popup"><i class="fas fa-times"></i></a>
+            <h2>Formulario de registro</h2>
+          </div>
+            <div>
+            <form action="" id="formularioRegistro">
+                      <div class="colums">
+                        <div class="field">
+                          <p class="control has-icons-left has-icons-right"><input class="input" type="email" placeholder="Email" id="emailValidar" required autocomplete="on" pattern="^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$"
+                              title="revisa tu correo" autocomplete><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span><span class="icon is-small is-right"><i class="fas fa-check"></i></span></p>
+                        </div>
+                        <div class="field">
+                          <p class="control has-icons-left"><input class="input" type="password" placeholder="password" required id="passWordValidar" autocomplete="off" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+                              title="Mínimo ocho caracteres, al menos una letra mayúscula, una letra minúscula y un número" autocomplete><span class="icon is-small is-left"><i class="fas fa-lock"></i></span>
+                            <span
+                              id="spanEyeRegistro" class="icon is-small is-right" style="right:0;margin:0 auto;pointer-events:all" onclick="mostrarContrasennia()"><i class="fas fa-eye"></i></span><span id="spanEyeOcultoRegistro" class="icon is-small is-right" style="display:none;right:0;pointer-events:all"
+                                onclick="ocultarContraseña()"><i class="fas fa-eye-slash"></i></span></p>
+                        </div>
+                        <div class="alineacionButton">
+                          <div class="container-buttonfinally" id="butonnn">
+                            <div class="field">
+                              <p class="control"><button class="button is-success" id="popupRegistro" style="background-color:#2630e2">Regístrate</button></p>
+                            </div>
+                          </div>
+                        </div>
+                    </form>
+                    <div class="container-buttonfinally" id="butonnn">
+                      <div class="field">
+                        <p class="control"><button class="button is-success" id="popupRegistro2" style="background-color:#2630e2">Info adicional</button></p>
+                      </div>
+                    </div>
+                    </div>
+                </section>
+                <section id="popupDesplegableInfoAdicional" class="section">
+                  <div><a href="#registroPopup" id="cierre2"  name="popup"><i class="fas fa-times"></i></a>
+                    <h2>Información adicional</h2>
+                  </div>
+                  <div>
+                    <form action="" id="formularioInfoAdicional">
+                      <div class="colums">
+                        <div class="field">
+                          <p class="control has-icons-left"><input class="input" type="text" placeholder="Username" id="userValidar" autocomplete><span class="icon is-small is-left"><i class="fas fa-user"></i></span></p>
+                        </div>
+                        <p id="parragoSignIn"></p>
+                        <div class="field">
+                          <p class="control has-icons-left"><input class="input" type="number" placeholder="Telephone" id="telefonoValidar" autocomplete><span class="icon is-small is-left"><i class="fas fa-phone-alt"></i></span></p>
+                        </div>
+                      </div>
+                      <div class="container-buttonfinally" id="butonnn2">
+                        <div class="field">
+                          <p class="control"><button class="button is-success" id="popupInfo" style="background-color:#2630e2">envia</button></p>
+                        </div>
+                      </div>
+                    </form>
+                </section>
         </footer>
         <script src="../js/burgerMenu.js"></script>
         <script type = "module" src="../js/index.mjs"></script>
-        <script type = "module" src="../js/funciones.mjs"></script>
+        
         <script type = "module" src="../js/registro.mjs"></script>
+        <script type = "module" src="../js/autenticacion.mjs"></script>
 </body>
 </html>
 

@@ -104,6 +104,49 @@ footer{
     position: fixed;
     bottom:0px;
     width:100%;
+  z-index:55;
+    #popupDesplegable,#popupDesplegableInfoAdicional{
+      display: none;
+      position: fixed;
+      margin-left: auto;
+      margin-right: auto;
+      max-width:600px;
+      max-height: 300px;
+      bottom: 15%;
+      right: 5%;
+      left: 5%;
+      top:15%;
+      
+      padding: 2rem 1rem;
+      background-color:$soft-blue;
+      border-radius: 25px;
+      border:2px solid rgba(52,152,219,.45);
+      box-shadow: 0 0 700px 700px rgba(52,152,219,0.25)
+      ;
+      div{
+        #cierre,#cierre2{
+          font-size: 25px;
+        }
+        h2{
+          margin-top: 10px;
+          margin-bottom: 15px;
+        }
+      }
+      #butonnn,#butonnn2{
+        .field{
+          .control{
+            #popupRegistro,#popupInfo{
+              margin-top:15px;
+            }
+          }
+        }
+      }
+    }
+    #popupRegistro2{
+      position: absolute;
+      margin-top:-40px;
+      margin-left:calc(100% - 58%);
+    }
 }
 
 @media (min-width: 600px) and (orientation: landscape) { 
