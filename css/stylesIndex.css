@@ -1,0 +1,90 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: 0;
+          box-sizing: 0;
+}
+
+header {
+  margin-bottom: 40px;
+}
+header #logoConcha {
+  margin-right: 15px;
+}
+header .navbar.is-fixed-top {
+  padding-bottom: 5px;
+  background-color: #3498DB;
+}
+header .navbar.is-fixed-top #navbarBasicExample {
+  background-color: #D9EFFD;
+}
+header .navbar.is-fixed-top #navbarBasicExample .navbar-end .navbar-item .buttons #botonInicio, header .navbar.is-fixed-top #navbarBasicExample .navbar-end .navbar-item .buttons #botonInicio2, header .navbar.is-fixed-top #navbarBasicExample .navbar-end .navbar-item .buttons #botonInicio3 {
+  color: #fff;
+  font-weight: bold;
+  background: #3498DB;
+}
+header #spancito {
+  position: absolute;
+  top: 30%;
+  right: 1em;
+  z-index: 9;
+}
+header #spancito i {
+  color: #3498DB;
+}
+header .navbar-dropdown {
+  display: none;
+}
+header .navbar-dropdown #headerH1_inicial {
+  font-family: "Segoe UI", "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+}
+header .spanOculto {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  header .spanOculto {
+    display: block;
+    margin-left: 10px;
+  }
+}
+main {
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+main .main-Form {
+  margin: 0 auto;
+  max-width: 600px;
+}
+main .main-Form #formularioLogin .field .control #buttonSign, main .main-Form #formularioLogin .field .control #buttonLogin {
+  background-color: #3498DB;
+}
+main .main-Form #formularioLogin .field .control #buttonGoogle {
+  background-image: -webkit-gradient(linear, right top, left top, from(#f4c20d), color-stop(#db3236), to(#4885ed));
+  background-image: linear-gradient(to left, #f4c20d, #db3236, #4885ed);
+}
+
+footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+}
+
+@media (min-width: 600px) and (orientation: landscape) {
+  header .navbar.is-fixed-top {
+    position: static;
+  }
+
+  footer {
+    position: static;
+  }
+}
+@media (min-width: 900px) and (orientation: landscape) {
+  footer {
+    position: fixed;
+  }
+}

@@ -1,0 +1,123 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:0;
+}
+
+  // variables 
+  $basico-white: #fff;
+  $basico-black: #000;
+  $basic-blue: #3498DB;
+  $soft-blue : #D9EFFD;
+  $oscuro : #2630E2;
+
+// inicio header
+
+header{
+    margin-bottom: 40px;
+    #logoConcha{
+    margin-right: 15px;
+        }
+    .navbar.is-fixed-top{
+    padding-bottom: 5px;
+    background-color: $basic-blue;
+      // burger menu, interno
+    #navbarBasicExample{
+    background-color:$soft-blue;
+      .navbar-end{
+        .navbar-item{
+          .buttons{
+            #botonInicio,#botonInicio2,#botonInicio3{
+              color: $basico-white;
+              font-weight: bold;
+              background: $basic-blue;
+          }
+        }
+      }
+    }
+  }
+}
+#spancito{
+  position: absolute;
+  top: 30%;
+  right: 1em;
+  z-index:9;
+  i{
+    color: $basic-blue;
+  }
+}
+.navbar-dropdown{
+  display: none;
+}
+.navbar-dropdown{
+#headerH1_inicial{
+    font-family: "Segoe UI","Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;;
+      font-weight: 400;
+      font-size:1.4rem;
+    }
+  }
+    .spanOculto{
+      display: none;
+  }
+}
+
+// media quei
+@media(min-width:1024px){
+    header .spanOculto {
+        display: block;
+        margin-left: 10px;
+    }
+}
+// final del header
+
+// inicio del main
+
+main{
+    margin-top:100px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    .main-Form{
+        margin: 0 auto;
+        max-width: 600px;
+        #formularioLogin{
+            .field{
+                .control{
+                    #buttonSign,#buttonLogin{
+                        background-color: $basic-blue;
+                    }
+                    #buttonGoogle{
+                        background-image: linear-gradient(to left , #f4c20d,#db3236,#4885ed);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// final del main 
+
+
+// inicio del footer
+
+footer{
+    position: fixed;
+    bottom:0px;
+    width:100%;
+}
+
+@media (min-width: 600px) and (orientation: landscape) { 
+    header{
+        .navbar.is-fixed-top{
+            position: static;
+        }
+    }
+    footer{
+        position: static;
+    }
+}
+@media (min-width: 900px) and (orientation: landscape) {
+    footer{
+        position: fixed;
+    }
+ }
