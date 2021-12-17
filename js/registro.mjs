@@ -2,10 +2,10 @@ import { autenticacion } from "./index.mjs";
 
 function registro(a) {
     a.preventDefault();
-    let email = document.getElementById('emailLogin').value;
-    let password = document.getElementById('passwordLogin').value;
+    let correo = document.getElementById('emailLogin').value;
+    let contrasennia = document.getElementById('passwordLogin').value;
     const instanciaRegistro = new autenticacion();
-    instanciaRegistro.registro(email,password);
+    instanciaRegistro.registro(correo,contrasennia);
 }
 
 const envioRegistro = document.getElementById('formularioLogin').addEventListener('submit',registro)

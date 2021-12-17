@@ -4,11 +4,11 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase
 // uso de analiticas para google
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics.js";
 // firestore data base
-import { getFirestore,collection,addDoc } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore.js";
+import { getFirestore,collection,addDoc } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
 // autenticacion
 import {
     getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword,signOut,GoogleAuthProvider,signInWithPopup,signInWithRedirect,FacebookAuthProvider
-    } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-auth.js";
+    } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
 // configuaracion de firebase
   const firebaseConfig = {
     apiKey: "AIzaSyCbJe3qhb9PAY6CeBh0Di0BE9KloZxWyvw",
@@ -33,7 +33,7 @@ export class autenticacion{
 
     registro(email,password){
         createUserWithEmailAndPassword(getAuth(), email, password)
-        .then((userCredential) => {
+            .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
           alert(`Bienvenido, listo para aprender?, inicia sesión`)
