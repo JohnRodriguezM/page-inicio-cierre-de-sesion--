@@ -116,8 +116,8 @@ footer{
         position: static;
     }
 }
-@media (min-width: 900px) and (orientation: landscape) {
+@media (min-width: 850px) and (orientation: landscape) {
     footer{
         position: fixed;
     }
- }
+}
