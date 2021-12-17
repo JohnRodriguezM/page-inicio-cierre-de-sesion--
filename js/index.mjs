@@ -69,4 +69,22 @@ export class autenticacion{
                 console.error(error.message)
             });
     }
+    google(){
+        const auth = getAuth();
+        const google = new GoogleAuthProvider();
+        signInWithRedirect(auth,google)
+        .then((_) => {
+            window.location.href = "../html/envioDatos.html";
+        }).catch((error) => {
+            // Handle Errors here.
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            // The email of the user's account used.
+            const email = error.email;
+            // The AuthCredential type that was used.
+            const credential = GoogleAuthProvider.credentialFromError(error);
+            // ...
+            alert("noo")
+        });
+    }
 }
