@@ -23,7 +23,7 @@ import {
   // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
-const analytics = getAnalytics(app);
+// const analytics = getAnalytics(app);
 
 
 // desarrollo para autenticacion de firebase
@@ -63,7 +63,7 @@ export class autenticacion{
     cerrarSesión(){
         signOut(getAuth())
             .then(()=> {
-                alert("haz cerrado sesion")
+                window.location.href = "https://johnrodriguezm.github.io/firsrCrud/html/index.html"
             })
             .catch((error)=>{
                 console.error(error.message)
@@ -73,7 +73,7 @@ export class autenticacion{
         const auth = getAuth();
         const google = new GoogleAuthProvider();
         signInWithRedirect(auth,google)
-        .then((_) => {
+        .then(() => {
             window.location.href = "https://johnrodriguezm.github.io/firsrCrud/html/envioDatos.html";
         }).catch((error) => {
             // Handle Errors here.
