@@ -73,7 +73,12 @@ export class autenticacion{
         const auth = getAuth();
         const google = new GoogleAuthProvider();
         signInWithRedirect(auth,google)
-        .then(() => {
+        .then((result) => {
+             // This gives you a Google Access Token. You can use it to access the Google API.
+    const credential = GoogleAuthProvider.credentialFromResult(result);
+    const token = credential.accessToken;
+    // The signed-in user info.
+    const user = result.user;
             window.location.href = "https://johnrodriguezm.github.io/firsrCrud/html/envioDatos.html";
         }).catch((error) => {
             // Handle Errors here.
