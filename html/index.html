@@ -8,7 +8,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
     crossorigin="anonymous">
+    <script src="https://unpkg.com/scrollreveal"></script>
     <link rel="stylesheet" href="../css/stylesIndex.css">
+    
     <script type = "module" src="../js/funciones.mjs"></script>
     <title>Log in</title>
 </head>
@@ -41,7 +43,7 @@
       </header>
 <main>
     <section class="main-Form">
-        <h1>Bienvenido a tu nueva página favorita</h1>
+        <h1>¡Bienvenido a tu nueva página favorita!</h1>
     <form action="" id="formularioLogin" class="formulario">
         <section class="section">
         <div class="columns" id="columnas">
@@ -69,27 +71,46 @@
                   <span style = "margin-left: 10px;">
                         <i class="fab fa-google" ></i>
                   </span>
-                   
               </button></p>
             <div class="field">
             <p class="control"><button class="button is-success" id="buttonLogin" style = " margin:0 auto; width: 100%; max-width:600px;"> ¿No tienes una cuenta? Regístrate</button></p>
             </div>
             </section>
-        
+            
+           <!-- <section class="mainInformacion">
+              <section class="mainInformacion1">
+                <div class = "divpre">
+                  ¿quienes somos?
+                  <button id="control">
+                    mas
+                  </button>
+                </div>
+                <div>
+                  <p class = "info" id = "info-Content1"></p>
+                </div>
+              </section>
+
+              <section class="mainInformacion2">
+
+              </section>
+
+              <section class="mainInformacion3">
+
+              </section>
+
+              <section class="mainInformacion4">
+
+              </section>
+
+            </section>-->
+
     </main>
         
-            <footer class="border-t border-gray-200">
-                <div
+        <footer class="border-t border-gray-200">
+                <div id = "footerSocialMedia"
                   class="container flex flex-wrap items-center justify-center px-4 py-8 mx-auto  lg:justify-between"
                 >
-                  <div class="grid justify-content-start" style = "margin-right: 55px; margin-left: 55px;">
-                    <ul class="flex items-center space-x-4">
-                      <li>Home</li>
-                      <li>About</li>
-                      <li>Contact</li>
-                      <li>Terms</li>
-                    </ul>
-                  </div>
+                 
                   <div class="flex justify-center mt-4 lg:mt-0" style = "margin-right: 55px; margin-left: 55px;">
                     <a>
                       <svg
@@ -97,7 +118,7 @@
                         stroke-linecap="round"
                         stroke-linejoin="round"
                         stroke-width="2"
-                        class="w-6 h-6 text-blue-600"
+                        class="w-8 h-8 text-blue-600"
                         viewBox="0 0 24 24"
                       >
                         <path
@@ -111,7 +132,7 @@
                         stroke-linecap="round"
                         stroke-linejoin="round"
                         stroke-width="2"
-                        class="w-6 h-6 text-blue-300"
+                        class="w-8 h-8 text-blue-300"
                         viewBox="0 0 24 24"
                       >
                         <path
@@ -126,7 +147,7 @@
                         stroke-linecap="round"
                         stroke-linejoin="round"
                         stroke-width="2"
-                        class="w-6 h-6 text-pink-400"
+                        class="w-8 h-8 text-pink-400"
                         viewBox="0 0 24 24"
                       >
                         <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
@@ -142,7 +163,7 @@
                         stroke-linecap="round"
                         stroke-linejoin="round"
                         stroke-width="0"
-                        class="w-6 h-6 text-blue-500"
+                        class="w-8 h-8 text-blue-500"
                         viewBox="0 0 24 24"
                       >
                         <path
@@ -154,6 +175,7 @@
                     </a>
                   </div>
                 </div>
+                
         <section id="popupDesplegable" class="section">
             <div><a href="#registroPopup" id="cierre"  name="popup"><i class="fas fa-times"></i></a>
             <h2>Formulario de registro</h2>
@@ -167,10 +189,10 @@
                         </div>
                         <div class="field">
                           <p class="control has-icons-left"><input class="input" type="password" placeholder="password" required id="passWordValidar" autocomplete="off" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
-                              title="Mínimo ocho caracteres, al menos una letra mayúscula, una letra minúscula y un número" autocomplete><span class="icon is-small is-left"><i class="fas fa-lock"></i></span>
+                              title="Mínimo ocho caracteres, al menos una letra mayúscula, una letra minúscula y un número, sin caracteres especiales" autocomplete><span class="icon is-small is-left"><i class="fas fa-lock"></i></span>
                             <span
-                              id="spanEyeRegistro" class="icon is-small is-right" style="right:0;margin:0 auto;pointer-events:all" onclick="mostrarContrasennia()"><i class="fas fa-eye"></i></span><span id="spanEyeOcultoRegistro" class="icon is-small is-right" style="display:none;right:0;pointer-events:all"
-                                onclick="ocultarContraseña()"><i class="fas fa-eye-slash"></i></span></p>
+                              id="spanEyeRegistro" class="icon is-small is-right" style="right:0;margin:0 auto;pointer-events:all" ><i class="fas fa-eye"></i></span><span id="spanEyeOcultoRegistro" class="icon is-small is-right" style="display:none;right:0;pointer-events:all"
+                              ><i class="fas fa-eye-slash"></i></span></p>
                         </div>
                         <div class="alineacionButton">
                           <div class="container-buttonfinally" id="butonnn">
@@ -216,6 +238,7 @@
         <script type = "module" src="../js/registro.mjs"></script>
         <script type = "module" src="../js/autenticacion.mjs"></script>
         <script type = "module" src="../js/googleRegister.mjs"></script>
+        <script type = "module" src="../js/animaciones.mjs"></script>
 </body>
 </html>
 

@@ -1,3 +1,4 @@
+/// libreria scrollreveal 
 
 // funcines del programa
 // funciones para el menu superior
@@ -47,6 +48,7 @@ const mostrar = () => {
   }
 
 const ojo = document.getElementById('spanEye').addEventListener("click",mostrarContrasennia)
+const ojoRegistro = document.getElementById('spanEyeRegistro').addEventListener('click',mostrarContrasennia)
 
   
   function ocultarContraseña() {
@@ -71,6 +73,7 @@ const ojo = document.getElementById('spanEye').addEventListener("click",mostrarC
   
   }
   const ojoCerrado = document.getElementById('spanEyeOculto').addEventListener("click",ocultarContraseña)
+  const ojoRegistroOculto = document.getElementById('spanEyeOcultoRegistro').addEventListener("click",ocultarContraseña)
   // cambiar de tipo password a texto
 
   function ocultarPopup() {
@@ -96,4 +99,17 @@ const ojo = document.getElementById('spanEye').addEventListener("click",mostrarC
     
     document.getElementById('cierre2').addEventListener('click', (_)=>{
       document.getElementById('popupDesplegableInfoAdicional').style.display = 'none';
+    })
+
+
+    // funcion para ocultar y mostrar el contenido
+
+    let btn1 = document.querySelector('#control');
+    export let divBtn = document.querySelector('#info-Content1')
+    
+    btn1.addEventListener('click', ()=>{
+     
+        divBtn.classList.toggle('flex')
+        divBtn.classList.toggle('hidden')
+        let x = document.getElementById('info-Content1').innerHTML = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti sint corporis, eius excepturi quidem fuga! Voluptatum rem voluptates, laborum, ratione esse nulla nam alias culpa atque ut inventore fugiat quas."
     })
