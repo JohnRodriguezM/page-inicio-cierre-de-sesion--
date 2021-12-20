@@ -75,8 +75,7 @@ export class autenticacion{
         signInWithRedirect(auth,google)
         .then((_) => {
             window.location.href = "https://johnrodriguezm.github.io/firsrCrud/html/envioDatos.html";
-        })
-        .catch((error) => {
+        }).catch((error) => {
             // Handle Errors here.
             const errorCode = error.code;
             const errorMessage = error.message;
