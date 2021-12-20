@@ -1,4 +1,4 @@
-/// libreria scrollreveal 
+/// libreria scrollreveal
 
 // funcines del programa
 // funciones para el menu superior
@@ -104,7 +104,7 @@ const ojoRegistro = document.getElementById('spanEyeRegistro').addEventListener(
 
     // funcion para ocultar y mostrar el contenido
 
-    let btn1 = document.querySelector('#control');
+    /*let btn1 = document.querySelector('#control');
     export let divBtn = document.querySelector('#info-Content1')
     
     btn1.addEventListener('click', ()=>{
@@ -112,4 +112,4 @@ const ojoRegistro = document.getElementById('spanEyeRegistro').addEventListener(
         divBtn.classList.toggle('flex')
         divBtn.classList.toggle('hidden')
         let x = document.getElementById('info-Content1').innerHTML = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti sint corporis, eius excepturi quidem fuga! Voluptatum rem voluptates, laborum, ratione esse nulla nam alias culpa atque ut inventore fugiat quas."
-    })
+    })*/
