@@ -1,4 +1,4 @@
-import { autenticacion } from "./index.mjs";
+import { autenticacion } from "./js/index.mjs";
 
 function google(a) {
     a.preventDefault();
