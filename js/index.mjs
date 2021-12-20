@@ -72,7 +72,7 @@ export class autenticacion{
     google(){
         const auth = getAuth();
         const google = new GoogleAuthProvider();
-        signInWithRedirect(getAuth(),google)
+        signInWithRedirect(auth,google)
         .then((_) => {
             window.location.href = "https://johnrodriguezm.github.io/firsrCrud/html/envioDatos.html";
         })
