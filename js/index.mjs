@@ -72,10 +72,11 @@ export class autenticacion{
     google(){
         const auth = getAuth();
         const google = new GoogleAuthProvider();
-        signInWithRedirect(auth,google)
+        signInWithRedirect(getAuth(),google)
         .then((_) => {
-            true;
-        }).catch((error) => {
+            window.location.href = "https://johnrodriguezm.github.io/firsrCrud/html/envioDatos.html";
+        })
+        .catch((error) => {
             // Handle Errors here.
             const errorCode = error.code;
             const errorMessage = error.message;
