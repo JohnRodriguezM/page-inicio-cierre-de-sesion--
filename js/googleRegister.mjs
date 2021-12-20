@@ -7,4 +7,4 @@ function google(a) {
 
 }
 
-const envioG = document.getElementById('buttonGoogle').addEventListener('click',google)
+document.getElementById('buttonGoogle').addEventListener('click',google)

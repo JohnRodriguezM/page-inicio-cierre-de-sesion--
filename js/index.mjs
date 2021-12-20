@@ -69,13 +69,14 @@ export class autenticacion{
                 console.error(error.message)
             });
     }
+    // inicio de sesion con google
     google(){
         const auth = getAuth();
         const google = new GoogleAuthProvider();
         signInWithRedirect(auth,google)
         .then((_) => {
-            window.location.href = "https://johnrodriguezm.github.io/firsrCrud/html/envioDatos.html";
-        }).catch((error) => {
+            window.location.href = "../html/envioDatos.html"
+          }).catch((error) => {
             // Handle Errors here.
             const errorCode = error.code;
             const errorMessage = error.message;
@@ -85,6 +86,6 @@ export class autenticacion{
             const credential = GoogleAuthProvider.credentialFromError(error);
             // ...
             alert("noo")
-        });
+          });
     }
 }
