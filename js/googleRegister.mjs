@@ -1,10 +1,10 @@
 import { autenticacion } from "./js/index.mjs";
 
-function google(a) {
-    a.preventDefault();
-    const envioGoogle = new autenticacion();
-    envioGoogle.google()
+function envioGoogle(a) {
+   a.preventDefault();
+   const envio = new autenticacion();
+   envio.google();
 
 }
 
-document.getElementById('buttonGoogle').addEventListener('click',google)
+document.getElementById('buttonGoogle').addEventListener('click',envioGoogle)
