@@ -101,7 +101,7 @@ export class autenticacion{
         const google = new GoogleAuthProvider();
         signInWithRedirect(auth,google)
         .then(() => {
-            window.location.href = "../html/envioDatos.html"
+            window.location.href = "https://github.com/JohnRodriguezM/firsrCrud/deployments/activity_log?environment=github-pages"
           }).catch((error) => {
             // Handle Errors here.
             const errorCode = error.code;
