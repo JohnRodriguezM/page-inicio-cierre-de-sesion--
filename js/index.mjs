@@ -105,7 +105,12 @@ export class autenticacion{
             const token = credential.accessToken;
     // The signed-in user info.
             const user = result.user;
-            window.location.href = "https://github.com/JohnRodriguezM/firsrCrud/deployments/activity_log?environment=github-pages"
+            if(user){
+                return  window.location.href = "https://github.com/JohnRodriguezM/firsrCrud/deployments/activity_log?environment=github-pages";
+            }else{
+                console.log(object);
+            }
+           
           }).catch((error) => {
             // Handle Errors here.
             const errorCode = error.code;
