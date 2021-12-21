@@ -3,9 +3,8 @@ import { autenticacion } from "./index.mjs";
 function envioGoogle(a) {
     a.preventDefault();
     const envio = new autenticacion();
-    if(envio.google()){
-        window.location.href = "../html/envioDatos.html"
-    }
+    envio.google()
+    envio.redireccion()
  }
 
  document.getElementById('buttonGoogle').addEventListener('click',envioGoogle)
