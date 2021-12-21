@@ -27,8 +27,34 @@ const db = getFirestore(app);
 
 
 // desarrollo para autenticacion de firebase
+function envioLogin(e) {
+  e.preventDefault(e);
+      const envioDatos = async() => {
+          try {
+          const docRef = await addDoc(collection(db, "usuarios"),{
+              user: document.getElementById('userValidar').value,
+              telefono : document.getElementById('telefonoValidar').value,
+          });
+          console.log("Document written with ID: ",docRef.id);
+          } catch (e) {
+          console.error("Error adding document: ", e);
+          }
+      }
+      envioDatos();
+      alert("Tus datos han sido enviados")
+     /* nombre(document.getElementById('userValidar').value); // pendiente definir esta funcion */
+      document.getElementById('formularioInfoAdicional').reset()
+    }
+
+    const enviar = document.getElementById('formularioInfoAdicional').addEventListener('submit',envioLogin)
+
+
+
+
+
 
 export class autenticacion{
+  
     // funcion para registro
 
     registro(email,password){
