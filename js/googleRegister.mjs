@@ -4,7 +4,7 @@ function envioGoogle(a) {
     a.preventDefault();
     const envio = new autenticacion();
     if(envio.google()){
-        window.location.href = "https://johnrodriguezm.github.io/firsrCrud/html/envioDatos.html"
+        window.location.href = "../html/envioDatos.html"
     }
  }
 

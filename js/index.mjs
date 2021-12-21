@@ -100,8 +100,8 @@ export class autenticacion{
         const auth = getAuth();
         const google = new GoogleAuthProvider();
         signInWithRedirect(auth,google)
-        .then((_) => {
-            window.location.href = "https://johnrodriguezm.github.io/firsrCrud/html/envioDatos.html"
+        .then(() => {
+            window.location.href = "../html/envioDatos.html"
           }).catch((error) => {
             // Handle Errors here.
             const errorCode = error.code;
