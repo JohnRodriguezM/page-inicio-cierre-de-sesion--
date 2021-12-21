@@ -7,9 +7,10 @@
   // variables 
   $basico-white: #fff;
   $basico-black: #000;
-  $basic-blue: #3498DB;
-  $soft-blue : #D9EFFD;
+  $basic-blue: #121f3d;
+  $soft-blue : #3b83bd ;
   $oscuro : #2630E2;
+  //$sombra-suave: ;
   
   html{
     scroll-behavior: smooth;
@@ -23,15 +24,26 @@
 
 header{
     margin-bottom: 40px;
+    
     #logoConcha{
     margin-right: 15px;
         }
     .navbar.is-fixed-top{
     padding-bottom: 5px;
     background-color: $basic-blue;
+
       // burger menu, interno
     #navbarBasicExample{
     background-color:$soft-blue;
+    .navbar-menu{
+      .navbar-start{
+        #iten{
+          color: $basico-white;
+        }
+
+      }
+    }
+    
       .navbar-end{
         .navbar-item{
           .buttons{
@@ -91,6 +103,9 @@ main{
     margin-right: auto;
     text-align: center;
     .main-Form{
+      h1{
+        color: $basico-white;
+      }
         margin: 35px auto;
         max-width: 600px;
         h1{

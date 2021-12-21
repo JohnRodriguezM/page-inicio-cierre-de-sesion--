@@ -7,7 +7,7 @@
 
 html {
   scroll-behavior: smooth;
-  background-color: #D9EFFD;
+  background-color: #3b83bd;
 }
 
 #emailValidar:valid, #passWordValidar:valid {
@@ -22,15 +22,18 @@ header #logoConcha {
 }
 header .navbar.is-fixed-top {
   padding-bottom: 5px;
-  background-color: #3498DB;
+  background-color: #121f3d;
 }
 header .navbar.is-fixed-top #navbarBasicExample {
-  background-color: #D9EFFD;
+  background-color: #3b83bd;
+}
+header .navbar.is-fixed-top #navbarBasicExample .navbar-menu .navbar-start #iten {
+  color: #fff;
 }
 header .navbar.is-fixed-top #navbarBasicExample .navbar-end .navbar-item .buttons #botonInicio, header .navbar.is-fixed-top #navbarBasicExample .navbar-end .navbar-item .buttons #botonInicio2, header .navbar.is-fixed-top #navbarBasicExample .navbar-end .navbar-item .buttons #botonInicio3 {
   color: #fff;
   font-weight: bold;
-  background: #3498DB;
+  background: #121f3d;
 }
 header #spancito {
   position: absolute;
@@ -39,7 +42,7 @@ header #spancito {
   z-index: 9;
 }
 header #spancito i {
-  color: #3498DB;
+  color: #121f3d;
 }
 header .navbar-dropdown {
   display: none;
@@ -71,11 +74,14 @@ main .main-Form {
   max-width: 600px;
 }
 main .main-Form h1 {
+  color: #fff;
+}
+main .main-Form h1 {
   font-size: 20px;
   font-weight: bold;
 }
 main .main-Form #formularioLogin .field .control #buttonSign, main .main-Form #formularioLogin .field .control #buttonLogin {
-  background-color: #3498DB;
+  background-color: #121f3d;
 }
 main .main-Form #formularioLogin .field .control #buttonGoogle {
   background-image: -webkit-gradient(linear, right top, left top, from(#f4c20d), color-stop(#db3236), to(#4885ed));
@@ -105,7 +111,7 @@ footer #popupDesplegable, footer #popupDesplegableInfoAdicional {
   top: 15%;
   z-index: 55;
   padding: 2rem 1rem;
-  background-color: #D9EFFD;
+  background-color: #3b83bd;
   border-radius: 25px;
   border: 2px solid rgba(52, 152, 219, 0.45);
   -webkit-box-shadow: 0 0 700px 700px rgba(52, 152, 219, 0.25);
