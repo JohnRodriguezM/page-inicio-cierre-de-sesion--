@@ -105,11 +105,11 @@ export class autenticacion{
             const token = credential.accessToken;
     // The signed-in user info.
             const user = result.user;
-            if(user){
-                return  window.location.href = "https://github.com/JohnRodriguezM/firsrCrud/deployments/activity_log?environment=github-pages";
-            }else{
-                console.log(object);
-            }
+            const direccion = "https://johnrodriguezm.github.io/firsrCrud/html/envioDatos.html";
+        function redireccion(){
+            document.location.href = direccion;
+        }
+        redireccion();
            
           }).catch((error) => {
             // Handle Errors here.
