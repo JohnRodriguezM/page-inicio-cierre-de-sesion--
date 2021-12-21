@@ -27,7 +27,11 @@ const db = getFirestore(app);
 
 
 // desarrollo para autenticacion de firebase
-/* function envioLogin(e) {
+/*
+
+pocisionar en otro documento, ya que interrumpe la carga
+
+function envioLogin(e) {
   e.preventDefault(e);
       const envioDatos = async() => {
           try {
@@ -107,7 +111,7 @@ export class autenticacion{
             const user = result.user;
             const direccion = "https://johnrodriguezm.github.io/firsrCrud/html/envioDatos.html";
         function redireccion(){
-            document.location.href = direccion;
+            window.location.href = direccion;
         }
         redireccion();
            
