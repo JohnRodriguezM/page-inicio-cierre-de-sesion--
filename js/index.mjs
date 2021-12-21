@@ -27,7 +27,7 @@ const db = getFirestore(app);
 
 
 // desarrollo para autenticacion de firebase
-function envioLogin(e) {
+/* function envioLogin(e) {
   e.preventDefault(e);
       const envioDatos = async() => {
           try {
@@ -42,12 +42,12 @@ function envioLogin(e) {
       }
       envioDatos();
       alert("Tus datos han sido enviados")
-     /* nombre(document.getElementById('userValidar').value); // pendiente definir esta funcion */
+     /* nombre(document.getElementById('userValidar').value); // pendiente definir esta funcion 
       document.getElementById('formularioInfoAdicional').reset()
     }
 
     const enviar = document.getElementById('formularioInfoAdicional').addEventListener('submit',envioLogin)
-
+*/
 
 
 
