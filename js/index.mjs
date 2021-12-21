@@ -100,7 +100,11 @@ export class autenticacion{
         const auth = getAuth();
         const google = new GoogleAuthProvider();
         signInWithRedirect(auth,google)
-        .then(() => {
+        .then((result) => {
+            const credential = GoogleAuthProvider.credentialFromResult(result);
+            const token = credential.accessToken;
+    // The signed-in user info.
+            const user = result.user;
             window.location.href = "https://github.com/JohnRodriguezM/firsrCrud/deployments/activity_log?environment=github-pages"
           }).catch((error) => {
             // Handle Errors here.
