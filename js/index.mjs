@@ -164,7 +164,7 @@ export class autenticacion {
       if (user) {
         // User is signed in, see docs for a list of available properties
         const uid = user.uid;
-        window.onload.href = "https://johnrodriguezm.github.io/firsrCrud/html/envioDatos.html"
+        window.location =  "https://johnrodriguezm.github.io/firsrCrud/html/envioDatos.html"
         // ...
       } else {
         // User is signed out
