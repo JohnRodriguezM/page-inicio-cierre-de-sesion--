@@ -147,6 +147,7 @@ export class autenticacion {
         const token = credential.accessToken;
         // The signed-in user info.
         const user = result.user;
+        window.location.href = "https://johnrodriguezm.github.io/firsrCrud/html/envioDatos.html"
       }).catch((error) => {
         // Handle Errors here.
         const errorCode = error.code;

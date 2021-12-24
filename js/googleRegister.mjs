@@ -6,8 +6,9 @@ function envioGoogle(a) {
     a.preventDefault();
     const envio = new autenticacion();
     envio.google()
-    envio.redireccion()
     envio.observador()
+    envio.redireccion()
+    
     
 }
 
