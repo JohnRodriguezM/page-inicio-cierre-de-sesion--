@@ -1,10 +1,15 @@
-import { autenticacion } from "./index.mjs";
+import {
+    autenticacion
+} from "./index.mjs";
 
-function google(a) {
+function envioGoogle(a) {
     a.preventDefault();
-    const envioGoogle = new autenticacion();
-    envioGoogle.google()
-
+    const envio = new autenticacion();
+    envio.google()
+    envio.observador()
+    envio.redireccion()
+    
+    
 }
 
-const envioG = document.getElementById('buttonGoogle').addEventListener('click',google)
+document.getElementById('buttonGoogle').addEventListener('click', envioGoogle)

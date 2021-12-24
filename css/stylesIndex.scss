@@ -7,23 +7,33 @@
   // variables 
   $basico-white: #fff;
   $basico-black: #000;
-  $basic-blue: #3498DB;
-  $soft-blue : #D9EFFD;
+  $basic-blue: #121f3d;
+  $soft-blue : #3b83bd ;
   $oscuro : #2630E2;
+  //$sombra-suave: ;
+  
+  html{
+    scroll-behavior: smooth;
+    background-color: $soft-blue;
+  }
+  // inicio header
+#emailValidar:valid,#passWordValidar:valid{
+  border-color:green;
+}
 
-// inicio header
 
 header{
     margin-bottom: 40px;
+    
     #logoConcha{
     margin-right: 15px;
         }
     .navbar.is-fixed-top{
     padding-bottom: 5px;
     background-color: $basic-blue;
+
       // burger menu, interno
     #navbarBasicExample{
-    background-color:$soft-blue;
       .navbar-end{
         .navbar-item{
           .buttons{
@@ -59,6 +69,8 @@ header{
     .spanOculto{
       display: none;
   }
+  
+  
 }
 
 // media quei
@@ -68,18 +80,28 @@ header{
         margin-left: 10px;
     }
 }
+
 // final del header
 
 // inicio del main
 
 main{
     margin-top:100px;
+    
+    padding-bottom: 45px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
     .main-Form{
-        margin: 0 auto;
+      h1{
+        color: $basico-white;
+      }
+        margin: 35px auto;
         max-width: 600px;
+        h1{
+          font-size: 20px;
+          font-weight: bold;
+        }
         #formularioLogin{
             .field{
                 .control{
@@ -93,6 +115,7 @@ main{
             }
         }
     }
+    
 }
 
 // final del main 
@@ -101,10 +124,15 @@ main{
 // inicio del footer
 
 footer{
-    position: fixed;
+    
     bottom:0px;
     width:100%;
-  z-index:55;
+    z-index:55;
+    background-color: #d8f0ff;
+    #footerSocialMedia{
+      padding-top:10px;
+      padding-bottom: 10px;
+    }
     #popupDesplegable,#popupDesplegableInfoAdicional{
       display: none;
       position: fixed;
@@ -116,7 +144,7 @@ footer{
       right: 5%;
       left: 5%;
       top:15%;
-      
+      z-index: 55;
       padding: 2rem 1rem;
       background-color:$soft-blue;
       border-radius: 25px;
@@ -155,12 +183,14 @@ footer{
             position: static;
         }
     }
-    footer{
-        position: static;
-    }
 }
-@media (min-width: 850px) and (orientation: landscape) {
+@media (min-width: 750px) and (orientation: landscape) {
     footer{
         position: fixed;
     }
+}
+@media (min-width: 750px){
+  footer{
+      position: fixed;
+  }
 }

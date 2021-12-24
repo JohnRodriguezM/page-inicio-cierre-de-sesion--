@@ -1,226 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
-    crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/stylesIndex.css">
-    <script type = "module" src="../js/funciones.mjs"></script>
-    <title>Log in</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <link rel="stylesheet" href="../css/stylesIndex.css">
+
+  <script type="module" src="../js/funciones.mjs"></script>
+  <title>Log in</title>
 </head>
+
 <body>
-    <header>
-        <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
-          <div class="navbar-brand">
-            <a class="navbar-item" href="#"><img src="../imgs/educacionprincial.png" alt="logo" width="30" height="80" id="logoConcha">
-              <h1 id="headerH1_inicial"><b>APRENDELO.COM</b></h1><span class="spanOculto">----</span></a>
-            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample"><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></a>
+  <header>
+    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="#"><img src="../imgs/educacionprincial.png" alt="logo" width="30" height="80"
+            id="logoConcha">
+          <h1 id="headerH1_inicial" style="color:white" ;><b>Learn.com</b></h1><span class="spanOculto">----</span>
+        </a>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample"
+          style="color:white" ;><span aria-hidden="true"></span><span aria-hidden="true"></span><span
+            aria-hidden="true"></span></a>
+      </div>
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start"><a class="navbar-item" style="color:white;"
+            href="https://johnrodriguezm.github.io/continuacionPublicClone/html/index.html">WHY TRAVEL AROUND THE
+            WORLD?</a><a class="navbar-item" style="color:white;">ABOUT US</a>
+          <div class="navbar-item has-dropdown is-hoverable is-white"><a class="navbar-link" id="target2"
+              style="color:white;">GET STARTED</a><span style="display:none" id="spancito"><i
+                class="fas fa-arrow-up"></i></span>
+            <div class="navbar-dropdown" id="barraOpciones"><a class="navbar-item" id="travelWithUS">TRAVEL WITH
+                US</a><a class="navbar-item" href="https://wa.me/573178333896" id="wa">WHATSAPP</a>
+              <hr class="navbar-divider"><a class="navbar-item" id="issue">Report any issue</a></div>
           </div>
-          <div id="navbarBasicExample" class="navbar-menu">
-            <div class="navbar-start"><a class="navbar-item" href="https://johnrodriguezm.github.io/continuacionPublicClone/html/index.html">WHY TRAVEL AROUND THE WORLD?</a><a class="navbar-item">ABOUT US</a>
-              <div
-                class="navbar-item has-dropdown is-hoverable"><a class="navbar-link" id="target2" >GET STARTED</a><span style="display:none" id="spancito"><i class="fas fa-arrow-up"></i></span>
-                <div
-                  class="navbar-dropdown" id="barraOpciones"><a class="navbar-item" id="travelWithUS">TRAVEL WITH US</a><a class="navbar-item" href="https://wa.me/573178333896" id="wa">WHATSAPP</a>
-                  <hr class="navbar-divider"><a class="navbar-item" id="issue">Report any issue</a></div>
+        </div>
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons"><a class="button is-primary" id="botonInicio"
+                href="#focus"><strong>Regístrate</strong></a><a class="button is-light" id="botonInicio2"
+                href="#focus">Inicia sesión</a>
+
+            </div>
           </div>
-          </div>
-         <!----> <div class="navbar-end">
-            <div class="navbar-item">
-              <div class="buttons"><a class="button is-primary" id="botonInicio" href="#focus"><strong>Regístrate</strong></a><a class="button is-light" id="botonInicio2" href="#focus">Inicia sesión</a>
-        
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="main-Form">
+      <h1>¡Bienvenido a tu nueva página favorita!</h1>
+      <form action="" id="formularioLogin" class="formulario">
+        <section class="section">
+          <div class="columns" id="columnas">
+            <div class="column is-4 is-offset-4" id="epa" style="margin:0 auto; width: 100%; max-width:600px">
+              <div class="field">
+                <div class="field">
+                  <p class="control has-icons-left has-icons-right"><input class="input" type="email"
+                      placeholder="Email" id="emailLogin">
+                    <a name="focus" autocomplete></a><span class="icon is-small is-left"><i
+                        class="fa fa-envelope"></i></span><span class="icon is-small is-right"><i
+                        class="fa fa-check"></i></span></p>
+                </div>
+                <div class="field">
+                  <p class="control has-icons-left"><input class="input" type="password" placeholder="Password"
+                      id="passwordLogin" autocomplete><span class="icon is-small is-left"><i
+                        class="fa fa-lock"></i></span>
+                    <span id="spanEye" class="icon is-small is-right"
+                      style="right:0;margin:0 auto;pointer-events:all"><i class="fas fa-eye"></i></span><span
+                      id="spanEyeOculto" class="icon is-small is-right"
+                      style="display:none;right:0;pointer-events:all"><i class="fas fa-eye-slash"></i></span></p>
+                </div>
+                <div class="container-buttonfinally">
+                  <div class="field">
+                    <p class="control"><button class="button is-success" id="buttonSign" type="submit"
+                        style=" margin:0 auto; width: 100%; max-width:600px; font-weight: bold;">Inicia sesión</button>
+                    </p>
+                  </div>
+
+                </div>
+      </form>
+      <div class="field">
+        <p class="control"><button class="button is-success" id="buttonGoogle" type="submit"
+            style=" margin:10px auto; width: 100%; max-width:600px; font-weight: bold;">
+            Inicia sesión con google
+            <span style="margin-left: 10px;">
+              <i class="fab fa-google"></i>
+            </span>
+          </button></p>
+        <div class="field">
+          <p class="control"><button class="button is-success" id="buttonLogin"
+              style=" margin:0 auto; width: 100%; max-width:600px;font-weight: bold;"> ¿No tienes una cuenta?
+              Regístrate</button></p>
+        </div>
+    </section>
+  </main>
+  <footer class="border-t border-gray-600">
+    <div id="footerSocialMedia"
+      class="container flex flex-wrap items-center justify-center px-4 py-8 mx-auto  lg:justify-between">
+      <div class="flex justify-center mt-4 lg:mt-0" style="margin-right: 55px; margin-left: 55px;">
+        <a>
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            class="w-8 h-8 text-blue-600" viewBox="0 0 24 24">
+            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+          </svg>
+        </a>
+        <a class="ml-3">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            class="w-8 h-8 text-blue-300" viewBox="0 0 24 24">
+            <path
+              d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+            </path>
+          </svg>
+        </a>
+        <a class="ml-3">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            class="w-8 h-8 text-pink-400" viewBox="0 0 24 24">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+          </svg>
+        </a>
+        <a class="ml-3">
+          <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0"
+            class="w-8 h-8 text-blue-500" viewBox="0 0 24 24">
+            <path stroke="none"
+              d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+            <circle cx="4" cy="4" r="2" stroke="none"></circle>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <section id="popupDesplegable" class="section">
+      <div><a href="#registroPopup" id="cierre" name="popup"><i class="fas fa-times"></i></a>
+        <h2>Formulario de registro</h2>
+      </div>
+      <div>
+        <form action="" id="formularioRegistro">
+          <div class="colums">
+            <div class="field">
+              <p class="control has-icons-left has-icons-right"><input class="input" type="email" placeholder="Email"
+                  id="emailValidar" required autocomplete="on"
+                  pattern="^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$"
+                  title="revisa tu correo" autocomplete><span class="icon is-small is-left"><i
+                    class="fas fa-envelope"></i></span><span class="icon is-small is-right"><i
+                    class="fas fa-check"></i></span></p>
+            </div>
+            <div class="field">
+              <p class="control has-icons-left"><input class="input" type="password" placeholder="password" required
+                  id="passWordValidar" autocomplete="off" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+                  title="Mínimo ocho caracteres, al menos una letra mayúscula, una letra minúscula y un número, sin caracteres especiales"
+                  autocomplete><span class="icon is-small is-left"><i class="fas fa-lock"></i></span>
+                <span id="spanEyeRegistro" class="icon is-small is-right"
+                  style="right:0;margin:0 auto;pointer-events:all"><i class="fas fa-eye"></i></span><span
+                  id="spanEyeOcultoRegistro" class="icon is-small is-right"
+                  style="display:none;right:0;pointer-events:all"><i class="fas fa-eye-slash"></i></span></p>
+            </div>
+            <div class="alineacionButton">
+              <div class="container-buttonfinally" id="butonnn">
+                <div class="field">
+                  <p class="control"><button class="button is-success" id="popupRegistro"
+                      style="background-color:#2630e2">Regístrate</button></p>
+                </div>
               </div>
             </div>
+        </form>
+        <div class="container-buttonfinally" id="butonnn">
+          <div class="field">
+            <p class="control"><button class="button is-success" id="popupRegistro2"
+                style="background-color:#2630e2">Info adicional</button></p>
           </div>
+        </div>
+      </div>
+    </section>
+    <section id="popupDesplegableInfoAdicional" class="section">
+      <div><a href="#registroPopup" id="cierre2" name="popup"><i class="fas fa-times"></i></a>
+        <h2>Información adicional</h2>
+      </div>
+      <div>
+        <form action="" id="formularioInfoAdicional">
+          <div class="colums">
+            <div class="field">
+              <p class="control has-icons-left"><input class="input" type="text" placeholder="Username" id="userValidar"
+                  autocomplete><span class="icon is-small is-left"><i class="fas fa-user"></i></span></p>
+            </div>
+            <p id="parragoSignIn"></p>
+            <div class="field">
+              <p class="control has-icons-left"><input class="input" type="number" placeholder="Telephone"
+                  id="telefonoValidar" autocomplete><span class="icon is-small is-left"><i
+                    class="fas fa-phone-alt"></i></span></p>
+            </div>
           </div>
-        </nav>
-      </header>
-<main>
-    <section class="main-Form">
-        <h1>Bienvenido a tu nueva página favorita</h1>
-    <form action="" id="formularioLogin" class="formulario">
-        <section class="section">
-        <div class="columns" id="columnas">
-    <div class="column is-4 is-offset-4" id="epa" style = "margin:0 auto; width: 100%; max-width:600px">
-        <div class="field">
-        <div class="field">
-        <p class="control has-icons-left has-icons-right"><input class="input" type="email" placeholder="Email" id="emailLogin">
-        <a name="focus" autocomplete></a><span class="icon is-small is-left"><i class="fa fa-envelope"></i></span><span class="icon is-small is-right"><i class="fa fa-check"></i></span></p>
-            </div>
-        <div class="field">
-        <p class="control has-icons-left"><input class="input" type="password" placeholder="Password" id="passwordLogin" autocomplete><span class="icon is-small is-left"><i class="fa fa-lock"></i></span>
-        <span id="spanEye" class="icon is-small is-right" style="right:0;margin:0 auto;pointer-events:all" ><i class="fas fa-eye"></i></span><span id="spanEyeOculto" class="icon is-small is-right" style="display:none;right:0;pointer-events:all"
-        ><i class="fas fa-eye-slash"></i></span></p>
-            </div>
-            <div class="container-buttonfinally">
+          <div class="container-buttonfinally" id="butonnn2">
             <div class="field">
-            <p class="control"><button class="button is-success" id="buttonSign" type="submit" style = " margin:0 auto; width: 100%; max-width:600px;" >Inicia sesión</button></p>
-                </div>
-           
+              <p class="control"><button class="button is-success" id="popupInfo"
+                  style="background-color:#2630e2">envia</button></p>
             </div>
-            </form>
-            <div class="field">
-              <p class="control"><button class="button is-success" id="buttonGoogle" type="submit" style = " margin:10px auto; width: 100%; max-width:600px;">
-                  Inicia sesión con google
-                  <span style = "margin-left: 10px;">
-                        <i class="fab fa-google" ></i>
-                  </span>
-                   
-              </button></p>
-            <div class="field">
-            <p class="control"><button class="button is-success" id="buttonLogin" style = " margin:0 auto; width: 100%; max-width:600px;"> ¿No tienes una cuenta? Regístrate</button></p>
-            </div>
-            </section>
-        
-    </main>
-        
-            <footer class="border-t border-gray-200">
-                <div
-                  class="container flex flex-wrap items-center justify-center px-4 py-8 mx-auto  lg:justify-between"
-                >
-                  <div class="grid justify-content-start" style = "margin-right: 55px; margin-left: 55px;">
-                    <ul class="flex items-center space-x-4">
-                      <li>Home</li>
-                      <li>About</li>
-                      <li>Contact</li>
-                      <li>Terms</li>
-                    </ul>
-                  </div>
-                  <div class="flex justify-center mt-4 lg:mt-0" style = "margin-right: 55px; margin-left: 55px;">
-                    <a>
-                      <svg
-                        fill="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        class="w-6 h-6 text-blue-600"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
-                        ></path>
-                      </svg>
-                    </a>
-                    <a class="ml-3">
-                      <svg
-                        fill="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        class="w-6 h-6 text-blue-300"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
-                        ></path>
-                      </svg>
-                    </a>
-                    <a class="ml-3">
-                      <svg
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        class="w-6 h-6 text-pink-400"
-                        viewBox="0 0 24 24"
-                      >
-                        <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-                        <path
-                          d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"
-                        ></path>
-                      </svg>
-                    </a>
-                    <a class="ml-3">
-                      <svg
-                        fill="currentColor"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="0"
-                        class="w-6 h-6 text-blue-500"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          stroke="none"
-                          d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
-                        ></path>
-                        <circle cx="4" cy="4" r="2" stroke="none"></circle>
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-        <section id="popupDesplegable" class="section">
-            <div><a href="#registroPopup" id="cierre"  name="popup"><i class="fas fa-times"></i></a>
-            <h2>Formulario de registro</h2>
           </div>
-            <div>
-            <form action="" id="formularioRegistro">
-                      <div class="colums">
-                        <div class="field">
-                          <p class="control has-icons-left has-icons-right"><input class="input" type="email" placeholder="Email" id="emailValidar" required autocomplete="on" pattern="^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$"
-                              title="revisa tu correo" autocomplete><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span><span class="icon is-small is-right"><i class="fas fa-check"></i></span></p>
-                        </div>
-                        <div class="field">
-                          <p class="control has-icons-left"><input class="input" type="password" placeholder="password" required id="passWordValidar" autocomplete="off" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
-                              title="Mínimo ocho caracteres, al menos una letra mayúscula, una letra minúscula y un número" autocomplete><span class="icon is-small is-left"><i class="fas fa-lock"></i></span>
-                            <span
-                              id="spanEyeRegistro" class="icon is-small is-right" style="right:0;margin:0 auto;pointer-events:all" onclick="mostrarContrasennia()"><i class="fas fa-eye"></i></span><span id="spanEyeOcultoRegistro" class="icon is-small is-right" style="display:none;right:0;pointer-events:all"
-                                onclick="ocultarContraseña()"><i class="fas fa-eye-slash"></i></span></p>
-                        </div>
-                        <div class="alineacionButton">
-                          <div class="container-buttonfinally" id="butonnn">
-                            <div class="field">
-                              <p class="control"><button class="button is-success" id="popupRegistro" style="background-color:#2630e2">Regístrate</button></p>
-                            </div>
-                          </div>
-                        </div>
-                    </form>
-                    <div class="container-buttonfinally" id="butonnn">
-                      <div class="field">
-                        <p class="control"><button class="button is-success" id="popupRegistro2" style="background-color:#2630e2">Info adicional</button></p>
-                      </div>
-                    </div>
-                    </div>
-                </section>
-                <section id="popupDesplegableInfoAdicional" class="section">
-                  <div><a href="#registroPopup" id="cierre2"  name="popup"><i class="fas fa-times"></i></a>
-                    <h2>Información adicional</h2>
-                  </div>
-                  <div>
-                    <form action="" id="formularioInfoAdicional">
-                      <div class="colums">
-                        <div class="field">
-                          <p class="control has-icons-left"><input class="input" type="text" placeholder="Username" id="userValidar" autocomplete><span class="icon is-small is-left"><i class="fas fa-user"></i></span></p>
-                        </div>
-                        <p id="parragoSignIn"></p>
-                        <div class="field">
-                          <p class="control has-icons-left"><input class="input" type="number" placeholder="Telephone" id="telefonoValidar" autocomplete><span class="icon is-small is-left"><i class="fas fa-phone-alt"></i></span></p>
-                        </div>
-                      </div>
-                      <div class="container-buttonfinally" id="butonnn2">
-                        <div class="field">
-                          <p class="control"><button class="button is-success" id="popupInfo" style="background-color:#2630e2">envia</button></p>
-                        </div>
-                      </div>
-                    </form>
-                </section>
-        </footer>
-        <script src="../js/burgerMenu.js"></script>
-        <script type = "module" src="../js/index.mjs"></script>
-        
-        <script type = "module" src="../js/registro.mjs"></script>
-        <script type = "module" src="../js/autenticacion.mjs"></script>
-        <script type = "module" src="../js/googleRegister.mjs"></script>
+        </form>
+    </section>
+  </footer>
+  <script src="../js/burgerMenu.js"></script>
+  <script type="module" src="../js/index.mjs"></script>
+  <script type="module" src="../js/registro.mjs"></script>
+  <script type="module" src="../js/autenticacion.mjs"></script>
+  <script type="module" src="../js/googleRegister.mjs"></script>
+  <script type="module" src="../js/dateBase.mjs"></script>
+  <script type="module" src="../js/animaciones.mjs"></script>
 </body>
+
 </html>
-
-
-
-
-
-
