@@ -1,62 +1,114 @@
-let elementos = ["piedra", "papel", "tijera"];
-
-function piedraPapelTijera(el) {
-    let item = elementos[Math.floor(Math.random() * elementos.length)];
-    let mensaje1 = console.log(`empaste contra tu gemelo ${item}`)
-    let mensaje2 = console.log(`perdiste contra ${item}`)
-    let mensaje3 = console.log(`felicidades, ganaste contra ${item}`)
-    if (el === elementos[0] && item === "piedra" || el === elementos[1] && item === "tijera" || el === elementos[2] && item === "piedra") {
-
-        return mensaje1
+function contador() {
+    let frutas = 100;
+    return function fruitas(nF) {
+        frutas -= nF;
+        console.log(frutas);
     }
-    if (el === elementos[0] && item === "papel" || el === elementos[1] && item === "tijera" || el === elementos[2] && item === "piedra") {
-
-        return mensaje2
-    }
-    if (el === elementos[0] && item === "tijera" || el === elementos[1] && item === "piedra" || el === elementos[2] && item === "papel") {
-
-        return mensaje3
-    }
-    let puntos = 0;
-    const contadorP = (puntoss) => {
-        if (mensaje1) {
-            return console.log(puntos = puntoss)
-        }
-        if (mensaje2) {
-            return console.log(puntos -= puntoss)
-        }
-        if (mensaje3) {
-            return console.log(puntos += puntoss)
-        }
-    }
-    contadorP;
 }
-let juego = piedraPapelTijera()
-console.log(juego(8))
+
+let frutero = contador();
+frutero(20)
+frutero(50)
+frutero(30)
+
+
+// se crea una clausura para el juego de piedra, papel o tijera y que de esta manera almacene los puntos necesarios
+
+
+
+function piedraPapelTijera() {
+
+    let puntos = 0;
+
+    function contadorP(el, puntoss = puntos) {
+        let elementos = ["piedra", "papel", "tijera"];
+        let item = elementos[Math.floor(Math.random() * elementos.length)];
+
+        /*const tiempo = setTimeout(() => {
+            puntos += 20;
+            console.log(`llevas un segundo jugando, tu puntos han incrementado en 20, felicidades, tus puntos actuales son ${puntos}`);
+        }, 5000);
+        clearTimeout(tiempo)*/
+
+        if (el === elementos[0] && item === "piedra" || el === elementos[1] && item === "papel" || el === elementos[2] && item === "tijera") {
+            puntos = puntoss + 0;
+            console.log(`empaste contra tu gemelo ${item} y sumaste 0 puntos, llevas ${puntos}`)
+            return puntos;
+        }
+        if (el === elementos[0] && item === "papel" || el === elementos[1] && item === "tijera" || el === elementos[2] && item === "piedra") {
+            puntos = puntoss - 1;
+
+            console.log(`perdiste contra ${item}  y perdiste 1 punto, llevas ${puntos}`)
+            return puntos;
+        }
+        if (el === elementos[0] && item === "tijera" || el === elementos[1] && item === "piedra" || el === elementos[2] && item === "papel") {
+            puntos = puntoss + 1;
+            console.log(`felicidades, ganaste contra ${item} y sumaste 1 punto, llevas ${puntos}`)
+            return puntos;
+        }
+        
+    }
+
+    return contadorP;
+
+}
+const hola = piedraPapelTijera()
+console.log(hola("tijera"))
+console.log(hola("papel"))
+console.log(hola("piedra"))
+console.log(hola("tijera"))
+console.log(hola("papel"))
+console.log(hola("tijera"))
+console.log(hola("piedra"))
+console.log(hola("tijera"))
+console.log(hola("papel"))
+console.log(hola("tijera"))
+console.log(hola("piedra"))
+console.log(hola("tijera"))
+console.log(hola("tijera"))
+console.log(hola("papel"))
+console.log(hola("piedra"))
+console.log(hola("tijera"))
+console.log(hola("papel"))
+
+
+
+
 
 let elementos = ["piedra", "papel", "tijera"];
 
 function piedraPapelTijera() {
 
-    let puntos = 100;
-    let item = elementos[Math.floor(Math.random() * elementos.length)];
-    const contadorP = (el,puntoss = 100) => {
-    
-        
+    let puntos = 0;
+
+    return function contadorP(el, puntoss = puntos) {
+
+        let item = elementos[Math.floor(Math.random() * elementos.length)];
         if (el === elementos[0] && item === "piedra" || el === elementos[1] && item === "tijera" || el === elementos[2] && item === "piedra") {
-            
-            console.log(`empaste contra tu gemelo ${item} y sumaste 0 puntos, llevas ${puntos = puntoss}`)
+            puntos = puntoss + 0;
+            console.log(`empaste contra tu gemelo ${item} y sumaste 0 puntos, llevas ${puntos}`)
+            return puntos;
         }
         if (el === elementos[0] && item === "papel" || el === elementos[1] && item === "tijera" || el === elementos[2] && item === "piedra") {
-            
-            console.log(`perdiste contra ${item}  y perdiste 1 punto, llevas ${puntos -= puntoss}`)
+            puntos = puntoss - 1;
+
+            console.log(`perdiste contra ${item}  y perdiste 1 punto, llevas ${puntos}`)
+            return puntos;
         }
         if (el === elementos[0] && item === "tijera" || el === elementos[1] && item === "piedra" || el === elementos[2] && item === "papel") {
-            let ganancia = 1
-            console.log(`felicidades, ganaste contra ${item} y sumaste 1 punto, llevas ${puntos += puntoss}`)
+            puntos = puntoss + 1;
+            console.log(`felicidades, ganaste contra ${item} y sumaste 1 punto, llevas ${puntos}`)
+            return puntos;
         }
     }
-    return contadorP;
 }
 const hola = piedraPapelTijera()
-console.log(hola("piedra"))
+console.log(hola("tijera"))
+console.log(hola("tijera"))
+console.log(hola("tijera"))
+console.log(hola("tijera"))
+console.log(hola("tijera"))
+console.log(hola("tijera"))
+console.log(hola("tijera"))
+console.log(hola("tijera"))
+console.log(hola("tijera"))

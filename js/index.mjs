@@ -124,13 +124,6 @@ export class autenticacion {
         const token = credential.accessToken;
         // The signed-in user info.
         const user = result.user;
-        const direccion = "https://johnrodriguezm.github.io/firsrCrud/html/envioDatos.html";
-
-        function redireccion() {
-          window.location.href = direccion;
-        }
-        redireccion();
-
       }).catch((error) => {
         // Handle Errors here.
         const errorCode = error.code;
@@ -141,28 +134,6 @@ export class autenticacion {
         const credential = GoogleAuthProvider.credentialFromError(error);
         // ...
         alert("noo")
-      });
-  }
-  redireccion() {
-    const auth = getAuth();
-    getRedirectResult(auth)
-      .then((result) => {
-        // This gives you a Google Access Token. You can use it to access Google APIs.
-        const credential = GoogleAuthProvider.credentialFromResult(result);
-        const token = credential.accessToken;
-        window.location.href = "https://www.googleapis.com/"
-
-        // The signed-in user info.
-        const user = result.user;
-      }).catch((error) => {
-        // Handle Errors here.
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        // The email of the user's account used.
-        const email = error.email;
-        // The AuthCredential type that was used.
-        const credential = GoogleAuthProvider.credentialFromError(error);
-        // ...
       });
   }
 }
