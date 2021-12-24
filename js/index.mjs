@@ -22,7 +22,8 @@ import {
   signInWithPopup,
   signInWithRedirect,
   FacebookAuthProvider,
-  getRedirectResult
+  getRedirectResult,
+  onAuthStateChanged,
 } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
 // configuaracion de firebase
 const firebaseConfig = {
@@ -124,6 +125,7 @@ export class autenticacion {
         const token = credential.accessToken;
         // The signed-in user info.
         const user = result.user;
+
       }).catch((error) => {
         // Handle Errors here.
         const errorCode = error.code;
@@ -135,5 +137,38 @@ export class autenticacion {
         // ...
         alert("noo")
       });
+  }
+  redireccion() {
+    const auth = getAuth();
+    getRedirectResult(auth)
+      .then((result) => {
+        // This gives you a Google Access Token. You can use it to access Google APIs.
+        const credential = GoogleAuthProvider.credentialFromResult(result);
+        const token = credential.accessToken;
+        // The signed-in user info.
+        const user = result.user;
+      }).catch((error) => {
+        // Handle Errors here.
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // The email of the user's account used.
+        const email = error.email;
+        // The AuthCredential type that was used.
+        const credential = GoogleAuthProvider.credentialFromError(error);
+        // ...
+      });
+  }
+  observador(){
+    onAuthStateChanged(getAuth(), (user) => {
+      if (user) {
+        // User is signed in, see docs for a list of available properties
+        const uid = user.uid;
+        window.location.href = "https://johnrodriguezm.github.io/firsrCrud/html/envioDatos.html"
+        // ...
+      } else {
+        // User is signed out
+        // ...
+      }
+    });
   }
 }
